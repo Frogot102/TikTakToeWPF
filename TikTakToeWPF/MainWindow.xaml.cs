@@ -75,5 +75,14 @@ namespace TikTakToeWPF
             }
             _isXTurn = true;
         }
+
+        private void NewGame_Click(object sender, RoutedEventArgs e)
+        {
+            foreach (Button btn in GameGrid.Children)
+            {
+                btn.Content = null;
+            }
+            _isXTurn = true;
+        }
     }
 }
