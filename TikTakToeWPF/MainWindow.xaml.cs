@@ -33,6 +33,7 @@ namespace TikTakToeWPF
 
             btn.Content = _isXTurn ? "X" : "O";
             _isXTurn = !_isXTurn;
+            ChechWinner();
         }
         private void ChechWinner()
         {
@@ -71,7 +72,6 @@ namespace TikTakToeWPF
             foreach(Button btn in GameGrid.Children)
             {
                 btn.Content = null;
-                
             }
             _isXTurn = true;
         }
